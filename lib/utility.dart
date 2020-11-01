@@ -1,8 +1,3 @@
-/// Support for doing something awesome.
-///
-/// More dartdocs go here.
 library utility;
 
-export 'src/utility_base.dart';
-
-// TODO: Export any libraries intended for clients of this package.
+export 'src/list/list.dart';

@@ -1,6 +1,9 @@
-import 'package:utility/utility.dart';
+import 'package:utility/src/dynamic/is_number.dart';
+import 'package:utility/src/list/compact.dart';
+
 
 void main() {
-  var awesome = Awesome();
-  print('awesome: ${awesome.isAwesome}');
+ var array = compact([0,1,null,true,false,'hey','','hi']);
+ print(isNumber(2.12));
+  print('awesome: ${array}');
 }
