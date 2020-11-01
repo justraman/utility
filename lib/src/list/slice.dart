@@ -1,27 +1,18 @@
+part of utility;
 
- List<T> slice<T>(List<T> list,int start, [int end]) {
-   var length = list == null ? 0 : list.length;
-   if (length <= 0) {
-     return [];
-   }
-   start = start ?? 0;
-   end = end ?? length;
- 
-   if (start < 0) {
-     start = -start > length ? 0 : (length + start );
-   }
-   end = end > length ? length : end;
-   if (end < 0) {
-     end += length;
-   }
-   length = start > end ? 0 : ((end - start) >> 0);
-   start = start >> 0;
- 
-   var index = -1;
-   var result = [];
-   while (++index < length) {
-     result.add(list.elementAt(index+start));
-   }
-   return result;
- }
- 
+///
+///Creates a slice of `list` from `start` up to, but not including, `end`.
+///
+///````dart
+///var list = [1, 2, 3, 4];
+///
+///// Does not affects on the data of list and returns a new sliced list object
+///var newSlicedList = slice(list, 2); // newSlicedList = [3, 4]
+///
+///// Does not affects on the data of list and returns a new sliced list object
+///var newSlicedList = list.slice(2); // list = [3, 4]
+///
+///````
+List<T> slice<T>(List<T> list, int start, [int end]) {
+  return list.slice(start, end);
+}

@@ -1,6 +1,9 @@
-bool isFalsey(dynamic value){
-  if(value == null || value == false || value == '' || value == 0){
-    return true;
-  }
-  return false;
+part of utility;
+
+///
+/// returns `true` is value is (`null`  or  `false`  or  `''`  or  `0`);
+///
+/// otherwise returns `false`
+bool isFalsey(dynamic value) {
+  return (value == null || value == false || value == '' || value == 0);
 }

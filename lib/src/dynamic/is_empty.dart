@@ -1,12 +1,8 @@
-bool isEmpty(dynamic value){
-  if(value is Map){
-    return value.isEmpty;
-  }
-  if(value is String){
-    return value.isEmpty;
-  }
-  if(value is Iterable){
-    return value.isEmpty;
+part of utility;
+
+bool isEmpty(dynamic value) {
+  if (value is Map || value is String || value is Iterable || value is List) {
+    return value?.isEmpty ?? false;
   }
   return false;
 }

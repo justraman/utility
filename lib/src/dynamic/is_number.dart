@@ -1,12 +1,12 @@
-import 'dart:developer';
+part of utility;
 
+/// returns `true` is `s` is number otherwise `false`
 bool isNumber(dynamic s) {
-  print(s is num);
-  if(s is num){
+  if (s is num) {
     return true;
   }
-  if(s == null) {
+  if (s == null) {
     return false;
   }
-  return double.parse(s, (e) => null) != null;
+  return double.tryParse(s) ?? false;
 }
